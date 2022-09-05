@@ -6,7 +6,75 @@ struct node
 	struct node *link;
 	int data ;
 }*last=NULL;
- 
+
+
+void create(int);
+void addatbeg(int);
+void addatafter(int,int);
+void display();
+void search(int);
+void count();
+void deletedata(int);
+
+void main()
+{
+	int ch;
+	int no;
+	int pos;
+	
+	while(1)
+	{
+		printf("\n*****Enter your choice*****");
+		printf("\n1.create 2.addatabeginning 3.addatafter 4.display 5.search 6.count 7.deletedata  8.exit \n");
+		scanf("%d",&ch);	
+		switch(ch)
+		{
+			case 1:
+					printf("Enter the data :");
+					scanf("%d",&no);
+					create(no);
+					break;
+			
+			case 2:
+					printf("Enter the data :");
+					scanf("%d",&no);
+					addatbeg(no);
+					break;
+					
+			case 3:
+					printf("Enter the position where you want to add data in between :");
+					scanf("%d",&pos);
+					printf("Enter the data :");
+					scanf("%d",&no);
+					addatafter(pos,no);
+					break;
+					
+			case 4:
+					display();
+					break;
+					
+			case 5:
+					printf("Enter the data to be searched :");
+					scanf("%d",&no);
+					search(no);
+					break;
+					
+			case 6:
+					count();
+					break;
+					
+			case 7:
+					printf("Enter the data to delete :");
+					scanf("%d",&no);
+					deletedata(no);
+					break;
+					
+			case 8:
+				exit(0);
+		}	
+	}
+}
+
 void create(int no)
 {
 	struct node *temp,*q;
@@ -171,63 +239,4 @@ void deletedata(no)
 		return;
 	}
 	
-}
-
-void main()
-{
-	int ch;
-	int no;
-	int pos;
-	
-	while(1)
-	{
-		printf("\n*****Enter your choice*****");
-		printf("\n1.create 2.addatabeginning 3.add 4.display 5.search 6.count 7.deletedata  8.exit \n");
-		scanf("%d",&ch);	
-		switch(ch)
-		{
-			case 1:
-					printf("Enter the data :");
-					scanf("%d",&no);
-					create(no);
-					break;
-			
-			case 2:
-					printf("Enter the data :");
-					scanf("%d",&no);
-					addatbeg(no);
-					break;
-					
-			case 3:
-					printf("Enter the position where you want to add data in between :");
-					scanf("%d",&pos);
-					printf("Enter the data :");
-					scanf("%d",&no);
-					addatafter(pos,no);
-					break;
-					
-			case 4:
-					display();
-					break;
-					
-			case 5:
-					printf("Enter the data to be searched :");
-					scanf("%d",&no);
-					search(no);
-					break;
-					
-			case 6:
-					count();
-					break;
-					
-			case 7:
-					printf("Enter the data to delete :");
-					scanf("%d",&no);
-					deletedata(no);
-					break;
-					
-			case 8:
-				exit(0);
-		}	
-	}
 }
