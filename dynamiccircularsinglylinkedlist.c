@@ -36,12 +36,22 @@ void main()
 					break;
 			
 			case 2:
+					if(last == NULL)
+					{
+						printf("list is Empty");
+						break;
+					}
 					printf("Enter the data :");
 					scanf("%d",&no);
 					addatbeg(no);
 					break;
 					
 			case 3:
+					if(last == NULL)
+					{
+						printf("list is Empty");
+						break;
+					}
 					printf("Enter the position where you want to add data in between :");
 					scanf("%d",&pos);
 					printf("Enter the data :");
@@ -50,20 +60,40 @@ void main()
 					break;
 					
 			case 4:
+					if(last == NULL)
+					{
+						printf("list is Empty");
+						break;
+					}
 					display();
 					break;
 					
 			case 5:
+					if(last == NULL)
+					{
+						printf("list is Empty");
+						break;
+					}
 					printf("Enter the data to be searched :");
 					scanf("%d",&no);
 					search(no);
 					break;
 					
 			case 6:
+					if(last == NULL)
+					{
+						printf("list is Empty");
+						break;
+					}
 					count();
 					break;
 					
 			case 7:
+					if(last == NULL)
+					{
+						printf("list is Empty");
+						break;
+					}
 					printf("Enter the data to delete :");
 					scanf("%d",&no);
 					deletedata(no);
